@@ -19,11 +19,11 @@ To install the plugin, do the following:
 
 ## Setting up the processing toolbox
 
-The processing toolbox is a plugin, which should be installed automatically when you install QGIS. If you don't have a menu item labelled 'Processing', follow the previous instructions to install the NTv2 Datum Transformations plugin, but search for 'Processing' and ensure that it is installed and enabled. (It's enabled if the box next to it is checked.)
+The processing toolbox is also a plugin, and it should be installed automatically when you install QGIS. If you don't have a menu item labelled 'Processing', follow the previous instructions to install the NTv2 Datum Transformations plugin, but search for 'Processing' and ensure that it is installed and enabled. (It's enabled if the box next to it is checked.)
 
 To open the processing toolbox and enable the NTv2 Datum Transformations plugins, do the following:
- * Go to the 'Processing' toolbar and click 'Toolbox' (this will be ticked if it's already open)
- * Processing has its own plugin process, and so you need to enable the plugin as a 'provider'. To do this, click on the 'enable additional providers' button
+ * Go to the 'Processing' menu item and click 'Toolbox' (this will be ticked if it's already open)
+ * Processing has its own plugin system for process providers, so you need to enable the ntv2 plugin as a 'provider'. To do this, click on the 'enable additional providers' button
  * In this dialog, expand 'Providers', then 'NTv2 Datum Transformations' and then check the box 'Activate'
 
 ![Enable providers](./images/providers_both.png)
@@ -45,9 +45,9 @@ To run the transformation, do the following:
  * Choose the 'Old' CRS and the 'New' CRS
  * If you're working with UTM (MGA or AMG) coordinates, you need to specify the Zone
  * For 'output' you can leave it blank to write to a temporary file, or choose an output file with '...'.
- * The checkbox 'Open output file ...' will load the resulting layer into your workspace.
+ * The checkbox 'Open output file after running algorithm' will load the resulting layer into your workspace.
 
-*Important note: the first time your run the plugin it will need to download the transformation grids, as they are not included in the main plugin download in order to save space. If you need to manually load these, see the optional step below.* 
+*Important note: the first time your run the plugin it will need to download the transformation grids, as they are not included in the main plugin download in order to save space. If you need to manually download these, see the optional step below.* 
 
 <div style="page-break-after: always;"></div>
 
@@ -55,10 +55,11 @@ To run the transformation, do the following:
 
 ### Support
 
-If you're having trouble with this plugin, you can find support through the community at [GIS StackExchange](gis.stackexchange.com). If there are bugs or problems with the plugin, you can raise an issue against the [project on GitHub](https://github.com/NaturalGIS/ntv2_transformations).
+If you're having trouble with this plugin, you can find support through the community at [GIS StackExchange](gis.stackexchange.com). 
+If there are bugs or problems with the plugin, you can raise an issue against the [project on GitHub](https://github.com/NaturalGIS/ntv2_transformations).
 
 ### Manually installing the transformation files
 
 If you want to manually install the transformation files, you can do it as follows:
  * Navigate to the ICSM GitHub repository for the transformation files, and download all the '.gsb' files: https://github.com/icsm-au/transformation_grids
- * Copy these files into the following folder: ~/.qgis2/python/plugins/ntv2_transformations/grids/ *Note: This .qgis directory is in your home/User directory.*
+ * Copy these files into the following folder: ~/.qgis2/python/plugins/ntv2_transformations/grids/ *Note: This .qgis directory is in your home or User directory, depending on your platform, and may be hidden.*
