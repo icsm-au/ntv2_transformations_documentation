@@ -55,7 +55,8 @@ To run the transformation, do the following:
 
 ### Support
 
-If you're having trouble with this plugin, you can find support through the community at [GIS StackExchange](gis.stackexchange.com). 
+If you're having trouble with this plugin, you can find support through the community at [GIS StackExchange](gis.stackexchange.com).
+
 If there are bugs or problems with the plugin, you can raise an issue against the [project on GitHub](https://github.com/NaturalGIS/ntv2_transformations).
 
 ### Manually installing the transformation files
